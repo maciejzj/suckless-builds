@@ -7,4 +7,5 @@ RUN pacman -Syu --noconfirm \
 	gcc \
 	make \
 	libx11 \
-	libxft
+	libxft \
+	pkgconf
