@@ -7,3 +7,9 @@
 [submodule "tabbed"]
 	path = tabbed
 	url = https://git.suckless.org/tabbed
+[submodule "scroll"]
+	path = scroll
+	url = https://git.suckless.org/scroll
+[submodule "utmp"]
+	path = utmp
+	url = https://git.suckless.org/utmp
