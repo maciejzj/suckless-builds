@@ -17,7 +17,7 @@ static int borderpx = 2;
  * 5: value of shell in config.h
  */
 static char *shell = "/bin/sh";
-char *utmp = "utmp";
+char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = "scroll";
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
