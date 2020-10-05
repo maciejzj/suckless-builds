@@ -1,0 +1,23 @@
+#!/bin/sh
+
+function print_bar {
+	cpu_proc=`mpstat | awk 'NR==4 {print 100 - $13 "%"}'`
+	cpu_temp=`sensors | awk '/CPUTIN/ {print $2}'`
+	mem_proc=`free -h | awk '(NR == 2) {print $3 "/" $2}'`
+	curr_date=`date +"%a %b %H:%M %d-%m-%Y"`
+
+	echo " "$cpu_proc $cpu_temp "|" $mem_proc "|" $curr_date
+}
+
+function update_bar {
+	xsetroot -name "`print_bar`"
+}
+
+function run_bar {
+	while true; do
+		update_bar
+		sleep 10s
+	done
+}
+
+run_bar
