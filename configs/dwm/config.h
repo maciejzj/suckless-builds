@@ -61,13 +61,15 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "tabbed", "-cr", "2", "st", "-w", "''", NULL };
 
-static const char *broswercmd[] = { "chromium" };
+static const char *broswercmd[] = { "chromium", NULL };
+static const char *surfcmd[] = { "tabbed", "surf", "-z", "1.1", "-e", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = broswercmd } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = surfcmd } },
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = broswercmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
