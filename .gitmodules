@@ -13,3 +13,6 @@
 [submodule "dwm"]
 	path = dwm
 	url = https://git.suckless.org/dwm
+[submodule "surf"]
+	path = surf
+	url = https://git.suckless.org/surf
