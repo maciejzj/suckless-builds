@@ -62,7 +62,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "tabbed", "-cr", "2", "st", "-w", "''", NULL };
 
 static const char *broswercmd[] = { "chromium", NULL };
-static const char *surfcmd[] = { "tabbed", "surf", "-z", "1.1", "-e", NULL };
+static const char *surfcmd[] = { "tabbed", "surf", "-N", "-z", "1.1", "-e", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
