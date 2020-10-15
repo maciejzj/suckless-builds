@@ -1,6 +1,6 @@
 # Suckless builds
 
-My setup of [suckless](suckless.org) tools for (Arch) Linux environment
+My setup of [suckless](suckless.org) tools for (Arch) Linux environment.
 Each suckless program is stored as a git submodule.
 Selection of patches in `patches` directory, configs in `config` directory.
 Features simple status bar for dwm and a custom homepage for surf.
