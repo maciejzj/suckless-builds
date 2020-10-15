@@ -1,0 +1,24 @@
+# Base build requirements
+gcr
+libx11
+libxinerama
+libxrandr 
+webki2gtk
+# Runtime dependencies
+# Minimal xorg runtime
+mesa
+xclip
+xorg-server
+xorg-xinit
+xorg-xrandr
+xorg-xsetroot
+# Fonts
+ttf-liberation ttf-freefont
+# Gstreamer plugins for playing videos in surf
+gst-plugins-good gst-plugins-bad
+# For dwmbar (remember to run `sensors-detect`)
+systat
+lm_sensors
+# Customization
+xwallpaper
+lxappearance
