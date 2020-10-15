@@ -19,6 +19,7 @@ To install packages with `pacman` run:
 sed '/^#/d' pkg-list.txt | pacman -S --needed -
 ```
 
+Package list assumes you have base developer tools installed.
 If you want to use my dwm bar remember to run `sensors-detect` before.
 List of other packages that I use (which are not suckless related) can be found
 in my [dotfiles](https://github.com/maciejzj/dotfiles).
