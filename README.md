@@ -9,6 +9,18 @@ Features simple status bar for dwm and a custom homepage for surf.
 
 Works best with my accompanying [dotfiles](https://github.com/maciejzj/dotfiles).
 
+## Prerequisites
+
+Dependencies for suckless programs and minimal `xorg` runtime are stored in
+`pkg-list.txt`.
+To install packages with `pacman` run:
+
+```
+sed '/^#/d' pkg-list.txt | pacman -S --needed -
+```
+
+If you want to use my dwm bar remember to run `sensors-detect` before.
+
 ## How to build
 
 Apply my selection of patches and copy configs.
