@@ -11,5 +11,5 @@ RUN pacman -Syu --noconfirm \
 	libxinerama \
 	libxrandr \
 	make \
-	pkgconf
+	pkgconf \
 	webkit2gtk
