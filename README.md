@@ -20,6 +20,7 @@ sed '/^#/d' pkg-list.txt | pacman -S --needed -
 ```
 
 Package list assumes you have base developer tools installed.
+Dockerfile contains more explicit list of packages needed for build step.
 If you want to use my dwm bar remember to run `sensors-detect` before.
 List of other packages that I use (which are not suckless related) can be found
 in my [dotfiles](https://github.com/maciejzj/dotfiles).
