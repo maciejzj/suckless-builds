@@ -21,4 +21,5 @@ systat
 lm_sensors
 # Customization
 xwallpaper
+xbindkeys
 lxappearance
