@@ -1,17 +1,23 @@
 #!/bin/sh
 
-function print_bar {
-	cpu_proc=`mpstat | awk 'NR==4 {print 100 - $13 "%"}'`
-	cpu_temp=`sensors | awk '/CPUTIN/ {print $2}'`
-	mem_proc=`free -h | awk 'NR==2 {print $3 "/" $2}'`
-	curr_date=`date +"%a %b %H:%M %d-%m-%Y"`
+set -eu
 
-	echo " "$cpu_proc $cpu_temp "|" $mem_proc "|" $curr_date
+
+function print_bar {
+	cpu_proc=$(mpstat | awk 'NR==4 {print 100 - $13 "%"}')
+	cpu_temp=$(sensors | awk '/CPUTIN/ {print $2}')
+	mem_proc=$(free -h | awk 'NR==2 {print $3 "/" $2}')
+	volume=$(amixer sget PCM | awk '/Front Left:/ {print($5)}' | tr -d "[]")
+	curr_date=$(date +"%a %b %H:%M %d-%m-%Y")
+
+	echo " "$cpu_proc $cpu_temp "|" $mem_proc "|" $volume "|" $curr_date
 }
+
 
 function update_bar {
 	xsetroot -name "`print_bar`"
 }
+
 
 function run_bar {
 	while true; do
@@ -20,4 +26,29 @@ function run_bar {
 	done
 }
 
+
+function usage {
+	echo \
+"Status bar for dwm.
+
+Available options:
+	-h	Print this help and exit
+	-u	Update once and exit
+
+If run without options will loop forever and update every 10 seconds."
+}
+
+
+while getopts 'hu' arg; do
+	case $arg in
+		h)
+			usage
+			exit
+			;;
+		u)
+			update_bar
+			exit
+			;;
+	esac
+done
 run_bar
