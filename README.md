@@ -1,5 +1,7 @@
 # Suckless builds
 
+[![Docker builder image](https://github.com/maciejzj/suckless-builds/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/maciejzj/suckless-builds/actions/workflows/docker-publish.yml)
+
 My setup of [suckless](https://suckless.org) tools for (Arch) Linux environment.
 Each suckless program is stored as a git submodule.
 Selection of patches in `patches` directory, configs in `config` directory.
