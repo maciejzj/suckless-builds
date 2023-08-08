@@ -2,8 +2,8 @@
 gcr
 libx11
 libxinerama
-libxrandr 
-webki2gtk
+libxrandr
+webkit2gtk
 # Runtime dependencies
 # Minimal xorg runtime
 mesa
@@ -13,12 +13,12 @@ xorg-xinit
 xorg-xrandr
 xorg-xsetroot
 # Fonts
-ttf-liberation ttf-freefont
-# Gstreamer plugins for playing videos in surf
-gst-plugins-good gst-plugins-bad
+ttf-liberation
+ttf-freefont
 # For dwmbar (remember to run `sensors-detect`)
-systat
+alsa-utils
 lm_sensors
+sysstat
 # Customization
 xwallpaper
 xbindkeys
